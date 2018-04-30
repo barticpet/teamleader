@@ -33,16 +33,18 @@ By the way: there may become more ways of granting customers discounts in the fu
 ## APIs
  - The customer list:
  
-$config['customerListLink']: this url can be stored on same folder or external link.
+$config['customerListLink']: this url can be stored on same server or external link.
 
  - The product list:
  
-$config['productListLink']: this url can be stored on same folder or external link
+$config['productListLink']: this url can be stored on same server or external link
 
  - The orders:
  
-$config['multipleOrders']=0; // if is set 1 put a path to the multiple orders folder
-$config['orderLink']: this url can be stored on same folder or external link
+$config['multipleOrders']=0; 
+ - if is set 1 put a path to the multiple orders folder; 
+ - if is set 0 there is a link to one order only
+$config['orderLink']: this url can be stored on same server or external link
 
 If you put $config['multipleOrders']=1, $config['orderLink'] should be a path on current server to a folder with orders
 
