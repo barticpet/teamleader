@@ -6,6 +6,7 @@ Teamleader DiscountService
 For now, there are three possible ways of getting a discount:
 
 - A customer who has already bought for over € minimumBuy, gets a discount of percentVal% on the whole order.
+
 Go in config and set $config['discounts']['discountByOrder']=
         [
             'minimumBuy'=>1000,
@@ -13,16 +14,19 @@ Go in config and set $config['discounts']['discountByOrder']=
         ];
 
 - For every product of category "categoryId" , when you buy minimumBuy, you get next for free.
+
 Go in config and set $config['discounts']['discountByCategory']=['categoryId'=>'minimumBuy']; 
 You can add more categories in this array;
 
 - If you buy minimumBuy or more products of category "categoryId" , you get a percentval% discount on the cheapest product.
+
 $config['discounts']['discountByCategoryMix']=[
 'categoryId'=>[
             'minimumBuy'=>2,
             'percentVal'=>20
         ]
 ];
+
 
 By the way: there may become more ways of granting customers discounts in the future: You can add new discount in $config['discounts'];
 
