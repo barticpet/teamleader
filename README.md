@@ -54,16 +54,21 @@ include "discountService.php";
 call $discount = new discountService($config);
 
  - Apply discount order:
+
 $discount->setDiscountByOrder();
 
  - Apply discount by category and get next for free
+
 $discount->setDiscountByCategory();
 
  - Apply discount by category and get percent from the cheapest product
+
 $discount->setDiscountByCategoryMix();
     
  - Apply all discounts;
+
 $discount->setAllDiscounts();
     
  - Create a json file:
+
 $discount->getFileOrderAfterDiscount();
