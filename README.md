@@ -72,3 +72,7 @@ $discount->setAllDiscounts();
  - Create a json file:
 
 $discount->getFileOrderAfterDiscount();
+
+##Online exemple for test
+
+https://nextcall.ro/teamleader/exemple.php
