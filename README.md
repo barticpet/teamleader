@@ -32,19 +32,25 @@ By the way: there may become more ways of granting customers discounts in the fu
 
 ## APIs
  - The customer list:
+ 
 $config['customerListLink']: this url can be stored on same folder or external link.
 
  - The product list:
+ 
 $config['productListLink']: this url can be stored on same folder or external link
 
- - The orders
+ - The orders:
+ 
 $config['multipleOrders']=0; // if is set 1 put a path to the multiple orders folder
 $config['orderLink']: this url can be stored on same folder or external link
 
 If you put $config['multipleOrders']=1, $config['orderLink'] should be a path on current server to a folder with orders
 
 ## How you get RESULTS:
-include "config.php";include "discountService.php";
+include "config.php";
+
+include "discountService.php";
+
 call $discount = new discountService($config);
 
  - Apply discount order:
