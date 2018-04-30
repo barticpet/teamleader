@@ -25,7 +25,7 @@ $config['discounts']['discountByCategoryMix']=[
             'minimumBuy'=>2,
             'percentVal'=>20
         ]
-];
+];You can add more categories in this array;
 
 
 By the way: there may become more ways of granting customers discounts in the future: You can add new discount in $config['discounts'];
