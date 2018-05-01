@@ -1,9 +1,9 @@
 <?php
 require_once('config.php');
 
-//if ($config['debug'])
+if ($config['debug'])
   error_reporting(E_ALL & ~E_NOTICE);
-  //else error_reporting(0);
+  else error_reporting(0);
 
 if(isset($_POST['Submit'])) {
     if ($_POST['customerListLink'])
@@ -20,7 +20,7 @@ if(isset($_POST['Submit'])) {
     //$discount->setDiscountByCategoryMix();
     $discount->setAllDiscounts();
     $discount->getFileOrderAfterDiscount();
-    $outputTextDiscount = '';//print_r($discount);
+    $outputTextDiscount = '';
     if (count($discount->orderList))
         foreach ($discount->orderList as $order){
             if (array_key_exists('discount',$order)){
@@ -47,7 +47,6 @@ if(isset($_POST['Submit'])) {
                 </div>';
             }
         }
-    //echo $discount->jsonEncode($discount->orderList);
   }
 ?> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
